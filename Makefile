@@ -1,10 +1,10 @@
-ASFLAGS= -mips2
-CC= cc
+ASFLAGS= 
+CC= g++ -std=c++11 -fpermissive
 AR= ar
 INSTALL= install
 MV= mv
 CHMOD= chmod
-CFLAGS= -g
+CFLAGS= -ggdb
 LIB_INSTALL_DIR= /usr/lib
 MAN_INSTALL_DIR= /usr/man/man3
 
