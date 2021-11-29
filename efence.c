@@ -829,7 +829,7 @@ extern C_LINKAGE char *
 strdup(const char *s1)
 {
         if (!s1) return 0;
-        char *s2 = malloc(strlen(s1) + 1);
+        char *s2 = (char *)malloc(strlen(s1) + 1);
 
         if (!s2) {
                 errno = ENOMEM;
@@ -850,7 +850,7 @@ strndup(const char *s1, size_t n)
                         break;
                 }
         }
-        char *s2 = malloc(complete_size);
+        char *s2 = (char *)malloc(complete_size);
 
         if (!s2) {
                 errno = ENOMEM;
